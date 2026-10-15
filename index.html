@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hướng dẫn Báo cáo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="icon-btn only-sm" id="btnNav" aria-label="Mục lục">☰</button>
+  <div class="brand">
+    <span class="logo">P</span>
+    <div><b>Hướng dẫn sử dụng — Module Báo cáo</b><small>Ứng dụng PHUWACO Works · Phiên bản tài liệu 1.0</small></div>
+  </div>
+  <div class="top-r">
+    <button class="icon-btn" id="themeBtn" title="Đổi giao diện sáng / tối">◐</button>
+    <button class="icon-btn only-md" id="btnPhone" title="Màn hình mô phỏng">📱</button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="nav" id="nav">
+    <div class="nav-search"><input id="treeSearch" type="search" placeholder="Tìm mục, tab, biểu đồ…"></div>
+    <div class="nav-hint">Chạm vào một mục để chuyển tới nội dung và mở đúng màn hình trên điện thoại mô phỏng.</div>
+    <nav id="tree"></nav>
+  </aside>
+
+  <main class="content" id="content">
+
+    <section class="doc-sec hero" id="s1" data-toc="1" data-toc-label="1. Giới thiệu" data-go="screen:home;target:nav-report">
+      <h2><span class="num">1</span> Giới thiệu</h2>
+      <p>Module <b>Báo cáo</b> cung cấp công cụ theo dõi trực quan và toàn diện các chỉ tiêu vận hành, kinh doanh &amp; dịch vụ khách hàng dành cho cán bộ quản lý: khách hàng, sản lượng, doanh thu, tỷ lệ thất thoát nước, giá bán bình quân, thu hộ tiền nước, định danh CCCD, công tác phát triển &amp; quản lý ĐHN (gắn mới, dời, thay), tiếp nhận hồ sơ DVKH / KTKS, quản lý hóa đơn và tỷ lệ người dùng ứng dụng Sawaco.</p>
+      <div class="howto">
+        <b>Cách dùng tài liệu này</b>
+        <ul>
+          <li>Cột trái là <b>mục lục dạng cây</b>. Chạm vào mục bất kỳ để cuộn tới nội dung và mở màn hình tương ứng trên điện thoại mô phỏng.</li>
+          <li>Nút <span class="kbd">Xem trên app ▸</span> ở từng bước sẽ đưa điện thoại tới đúng vị trí, khung cần chú ý được viền đỏ.</li>
+          <li>Điện thoại mô phỏng có thể thao tác thật: chạm thẻ KPI, đổi tab, mở bộ lọc, chạm cột / lát donut, đổi Biểu đồ ↔ Bảng, kéo xuống để làm mới, vuốt ngang để đổi tab.</li>
+          <li>Nút <span class="kbd">Ảnh thực tế</span> phía trên điện thoại hiển thị ảnh chụp màn hình từ app thật.</li>
+        </ul>
+      </div>
+      <h4 id="s1-access" data-toc="2" data-toc-label="Cách truy cập" data-go="screen:home;target:nav-report">Cách truy cập</h4>
+      <ol class="steps">
+        <li data-go="screen:home;target:nav-report"><span class="sn">Bước 1</span><span class="st">Đăng nhập ứng dụng PHUWACO Works. Màn hình Trang chủ hiển thị.</span><button class="go-btn" data-go="screen:home">Xem trên app ▸</button></li>
+        <li><span class="sn">Bước 2</span><span class="st">Tại thanh điều hướng chính ở góc dưới màn hình, chạm vào biểu tượng <b>Biểu đồ</b> (vị trí trung tâm).</span><button class="go-btn" data-go="screen:home;target:nav-report">Xem trên app ▸</button></li>
+        <li><span class="sn">Bước 3</span><span class="st">Màn hình <b>Báo cáo tổng quan</b> mở ra.</span><button class="go-btn" data-go="screen:overview;target:ov-chart">Xem trên app ▸</button></li>
+      </ol>
+    </section>
+
+    <section class="doc-sec" id="s2" data-toc="1" data-toc-label="2. Màn hình Báo cáo tổng quan" data-go="screen:overview">
+      <h2><span class="num">2</span> Màn hình Báo cáo tổng quan</h2>
+      <p>Màn hình được chia thành 2 khu vực chức năng chính: <b>Biểu đồ so sánh đa năm</b> phía trên và <b>Danh sách thẻ chỉ số KPI</b> phía dưới. Dữ liệu được tự động đồng bộ khi truy cập; có thể <b>kéo vuốt xuống (Pull-to-refresh)</b> để cập nhật chỉ số mới nhất.</p>
+
+      <div class="sub" id="s2-1" data-toc="2" data-toc-label="2.1 Biểu đồ so sánh theo năm" data-go="screen:overview;target:ov-chart">
+        <h3><span class="num">2.1</span> Biểu đồ so sánh theo năm</h3>
+        <ol class="steps">
+          <li><span class="sn">Bước 1</span><span class="st">Chọn chỉ tiêu bằng các nút <b>Doanh thu</b>, <b>Giá bán bình quân</b>, <b>Sản lượng</b>.</span><button class="go-btn" data-go="screen:overview;target:ov-chart;pill:0">Xem trên app ▸</button></li>
+          <li><span class="sn">Bước 2</span><span class="st">Đọc số trên đầu cột theo từng tháng; biểu đồ này <b>không có tooltip</b>. Vuốt ngang để xem đủ 12 tháng.</span><button class="go-btn" data-go="screen:overview;target:ov-chart;pill:1">Xem trên app ▸</button></li>
+          <li><span class="sn">Bước 3</span><span class="st">Phần chú thích bên dưới ghi giá trị tổng hợp cả năm của từng năm.</span><button class="go-btn" data-go="screen:overview;target:ov-chart;pill:2">Xem trên app ▸</button></li>
+        </ol>
+        <div class="note"><b>Lưu ý nghiệp vụ</b><ul>
+          <li>Với chỉ số Giá bán bình quân, giá trị tại chú thích = <b>Tổng doanh thu ÷ Tổng sản lượng lũy kế cả năm</b> (không cộng bình quân đơn thuần giữa các kỳ).</li>
+          <li>Mất kết nối hoặc phản hồi chậm quá 30 giây: hiển thị "Không tải được dữ liệu" kèm nút <b>Thử lại</b>. <button class="go-btn sm" data-go="screen:overview;mode:error">Xem ▸</button></li>
+        </ul></div>
+      </div>
+
+      <div class="sub" id="s2-2" data-toc="2" data-toc-label="2.2 Các thẻ chỉ số (KPI Cards)" data-go="screen:overview;target:kpi-kh">
+        <h3><span class="num">2.2</span> Các thẻ chỉ số (KPI Cards)</h3>
+        <p>Thẻ KPI bố trí dạng lưới 2 cột. Mỗi thẻ gồm: biểu tượng, tên chỉ tiêu, giá trị tổng hợp nổi bật và dòng chú thích tăng trưởng / kế hoạch. Dữ liệu mặc định theo năm báo cáo hiện hành. Khi đang tải, thẻ hiển thị khung xám nhấp nháy (skeleton). <button class="go-btn sm" data-go="screen:overview;mode:skeleton">Xem ▸</button></p>
+        <p>Chạm vào một thẻ để mở <b>Báo cáo chi tiết</b> ở đúng tab tương ứng:</p>
+        <div class="kpi-table" id="kpiTable"></div>
+      </div>
+    </section>
+
+    <section class="doc-sec" id="s3" data-toc="1" data-toc-label="3. Báo cáo chi tiết & thao tác chung" data-go="tab:kh">
+      <h2><span class="num">3</span> Màn hình Báo cáo chi tiết và thao tác chung</h2>
+
+      <div class="sub" id="s3-1" data-toc="2" data-toc-label="3.1 Khung màn hình & thanh tab" data-go="screen:overview;target:kpi-kh">
+        <h3><span class="num">3.1</span> Khung màn hình &amp; Thanh tab chuyển đổi</h3>
+        <ol class="steps">
+          <li><span class="sn">Bước 1</span><span class="st">Chạm vào thẻ KPI ở màn hình tổng quan. Màn hình Báo cáo chi tiết mở sẵn đúng tab tương ứng.</span><button class="go-btn" data-go="screen:overview;target:kpi-sl">Xem trên app ▸</button></li>
+          <li><span class="sn">Bước 2</span><span class="st">Thanh tab có 14 tab: Khách hàng, Sản lượng, Doanh thu, Thất thoát nước, Giá bán bình quân, Thu hộ tiền nước, Định danh, Gắn mới ĐHN, Dời ĐHN, Thay ĐHN, Hồ sơ DVKH, Hồ sơ KTKS, Hóa đơn, KH đã tải app Sawaco.</span><button class="go-btn" data-go="tab:sl">Xem trên app ▸</button></li>
+          <li><span class="sn">Bước 3</span><span class="st">Thanh tab cuộn ngang được; tab đang chọn in đậm và có gạch chân. Có thể <b>vuốt ngang vùng nội dung</b> để sang tab kế bên.</span><button class="go-btn" data-go="tab:dt">Xem trên app ▸</button></li>
+          <li><span class="sn">Bước 4</span><span class="st">Mỗi tab giữ nguyên bộ lọc và vị trí đang xem khi chuyển qua lại giữa các tab.</span><button class="go-btn" data-go="tab:kh">Xem trên app ▸</button></li>
+        </ol>
+      </div>
+
+      <div class="sub" id="s3-2" data-toc="2" data-toc-label="3.2 Cấu trúc thẻ & chế độ hiển thị" data-go="tab:kh;target:kh-cdhn">
+        <h3><span class="num">3.2</span> Cấu trúc thẻ báo cáo &amp; Chế độ hiển thị</h3>
+        <div class="anatomy">
+          <div class="an-card">
+            <div class="an-h"><div><div class="an-t">Khách hàng theo cỡ ĐHN <em>①</em></div><div class="an-s">Kỳ 9 - Diên Hồng - Năm 2026 <em>②</em></div></div><span class="an-f">⏷<i></i><em>③</em></span></div>
+            <div class="an-vt"><span class="on">▮ Biểu đồ</span><span>☰ Bảng</span><em>④</em></div>
+          </div>
+          <ol class="an-list">
+            <li><b>Tiêu đề</b> thẻ.</li>
+            <li><b>Phụ đề</b> ghi điều kiện đang xem, ví dụ "Kỳ 9 - Diên Hồng - Năm 2026".</li>
+            <li><b>Nút lọc</b> (phễu). Khi đang lọc, biểu tượng chuyển xanh và có chấm xanh nhỏ.</li>
+            <li><b>Công tắc Biểu đồ / Bảng</b>. Mặc định là Biểu đồ.</li>
+          </ol>
+        </div>
+        <ul class="bul">
+          <li>Bộ lọc của mỗi thẻ độc lập với các thẻ khác. Ngoại lệ:
+            <ul>
+              <li>Đổi Năm ở thẻ <b>Doanh thu theo đợt</b> sẽ tải lại toàn bộ tab Doanh thu. <button class="go-btn sm" data-go="tab:dt;target:dt-dot;open:filter">Xem ▸</button></li>
+              <li>Năm ở tab <b>Thay ĐHN</b> dùng chung cho cả Cỡ nhỏ và Cỡ lớn. <button class="go-btn sm" data-go="tab:thay;target:thay-nho;open:filter">Xem ▸</button></li>
+              <li>Bộ lọc ở khung <b>Chi tiết sản lượng</b> áp dụng cho cả 4 thẻ trong khung. <button class="go-btn sm" data-go="tab:sl;target:sl-ct-g;open:filter">Xem ▸</button></li>
+            </ul></li>
+          <li>Các nhóm dữ liệu lớn có <b>khung tiêu đề thu gọn / mở rộng</b>: vạch dọc màu xanh bên trái, mũi tên ▼ bên phải, chạm tiêu đề để đóng hoặc mở. <button class="go-btn sm" data-go="tab:tt;target:tt-dht">Xem ▸</button></li>
+          <li>Một số khu vực có công tắc riêng: Chưa xử lý / Đã xử lý (DVKH, KTKS) <button class="go-btn sm" data-go="tab:dvkh;target:dvkh-seg">Xem ▸</button>, Cỡ nhỏ / Cỡ lớn (Thay ĐHN) <button class="go-btn sm" data-go="tab:thay;target:thay-seg">Xem ▸</button>, Chuẩn thu 1 / Chuẩn thu 2 (Thất thoát nước) <button class="go-btn sm" data-go="tab:tt;target:tt-dht-ct">Xem ▸</button>.</li>
+        </ul>
+        <ol class="steps">
+          <li><span class="sn">Thử</span><span class="st">Chuyển thẻ Khách hàng theo cỡ ĐHN sang chế độ <b>Bảng</b>.</span><button class="go-btn" data-go="tab:kh;target:kh-cdhn;view:table">Xem trên app ▸</button></li>
+        </ol>
+      </div>
+
+      <div class="sub" id="s3-3" data-toc="2" data-toc-label="3.3 Bộ lọc dữ liệu" data-go="tab:kh;target:kh-cdhn;open:filter">
+        <h3><span class="num">3.3</span> Bộ lọc dữ liệu</h3>
+        <ol class="steps">
+          <li><span class="sn">Bước 1</span><span class="st">Chạm nút lọc (phễu) trên thẻ để mở bảng <b>"Bộ lọc"</b> từ dưới lên.</span><button class="go-btn" data-go="tab:kh;target:kh-cdhn;open:filter">Xem trên app ▸</button></li>
+          <li><span class="sn">Bước 2</span><span class="st">Chọn giá trị cho từng ô (tùy thẻ):
+            <ul>
+              <li><b>Năm</b>: danh sách năm do hệ thống cung cấp, mặc định năm báo cáo mới nhất.</li>
+              <li><b>Kỳ</b>: Kỳ 1–12 hoặc "Tất cả", mặc định kỳ của tháng hiện tại.</li>
+              <li><b>Đợt</b>: Đợt 1–6 (chỉ có ở tab Sản lượng).</li>
+              <li><b>Phường</b>: "Tất cả" hoặc tên phường.</li>
+              <li><b>Từ ngày – Đến ngày</b>: chọn bằng lịch, bấm "Xong". "Đến ngày" không được trước "Từ ngày" và không sau hôm nay. Ở tab Thu hộ, ngày bị giới hạn trong tháng của kỳ đã chọn.</li>
+              <li><b>Nội dung</b>: nội dung đơn (chỉ ở tab DVKH, KTKS).</li>
+            </ul></span><button class="go-btn" data-go="tab:thuho;target:thuho-ky;open:filter">Xem trên app ▸</button></li>
+          <li><span class="sn">Bước 3</span><span class="st">Bấm <b>Áp dụng</b> để tải lại dữ liệu; trong lúc tải, nút hiện vòng xoay. Nút lọc chuyển xanh, có chấm xanh.</span><button class="go-btn" data-go="tab:sl;target:sl-ct-g;open:filter">Xem trên app ▸</button></li>
+          <li><span class="sn">Bước 4</span><span class="st">Thẻ chỉ lọc theo năm: nút lọc mở thẳng danh sách <b>"Chọn năm"</b>, chọn xong tự tải lại.</span><button class="go-btn" data-go="tab:doi;target:doi-phuong;open:filter">Xem trên app ▸</button></li>
+        </ol>
+        <div class="note"><b>Phạm vi "Xóa filter" tùy thẻ</b><ul>
+          <li>Đưa hết về mặc định: Khách hàng, Chi tiết sản lượng.</li>
+          <li>Chỉ bỏ Phường hoặc Nội dung, giữ Năm, Kỳ, ngày: Hóa đơn theo đợt, DVKH, KTKS.</li>
+          <li>Chỉ trả các ô về giá trị lúc vừa mở bảng lọc: Thu hộ.</li>
+        </ul></div>
+      </div>
+
+      <div class="sub" id="s3-4" data-toc="2" data-toc-label="3.4 Biểu đồ tương tác & Tooltip" data-go="tab:dt;target:dt-ky;tip:3">
+        <h3><span class="num">3.4</span> Biểu đồ tương tác &amp; Tooltip</h3>
+        <div class="grid2">
+          <div class="mini" id="s3-4a" data-toc="3" data-toc-label="Biểu đồ cột" data-go="tab:dt;target:dt-ky;tip:3">
+            <b>Biểu đồ cột</b>
+            <ul><li>Số trên đầu cột rút gọn: k = nghìn, tr = triệu, tỷ (doanh thu). Cột giá trị 0 không ghi số.</li><li>Chạm một cột: khung tối hiện số đầy đủ dạng "Tên dãy: giá trị". Chạm chỗ khác để ẩn.</li><li>Nhiều cột thì vuốt ngang; chú thích chỉ hiện khi có từ 2 dãy.</li></ul>
+            <button class="go-btn" data-go="tab:dt;target:dt-ky;tip:3">Xem trên app ▸</button>
+          </div>
+          <div class="mini" id="s3-4b" data-toc="3" data-toc-label="Biểu đồ cột + đường" data-go="tab:tt;target:tt-combo;tip:2">
+            <b>Biểu đồ kết hợp cột và đường</b> (Thất thoát nước)
+            <ul><li>Chạm một kỳ: dòng đầu là tên kỳ, tiếp theo từng dãy kèm chấm màu.</li><li>Chạm mục chú thích để ẩn / hiện dãy; dãy ẩn có gạch ngang và không có trong tooltip.</li></ul>
+            <button class="go-btn" data-go="tab:tt;target:tt-combo;tip:2">Xem trên app ▸</button>
+          </div>
+          <div class="mini" id="s3-4c" data-toc="3" data-toc-label="Biểu đồ donut" data-go="tab:thay;target:thay-nho;sel:4">
+            <b>Biểu đồ donut</b>
+            <ul><li>Tâm vòng đóng vai trò tooltip: bình thường hiện Tổng.</li><li>Chạm một lát hoặc mục chú thích: lát nổi lên, lát khác mờ đi; tâm hiện tên – số lượng – %.</li><li>Chạm lại lát đó hoặc ra ngoài vòng để bỏ chọn. Chú thích chia 2 cột.</li></ul>
+            <button class="go-btn" data-go="tab:thay;target:thay-nho;sel:4">Xem trên app ▸</button>
+          </div>
+          <div class="mini" id="s3-4d" data-toc="3" data-toc-label="Bản đồ nhiệt" data-go="tab:kh;target:kh-gb;tip:301">
+            <b>Bản đồ nhiệt</b> (Khách hàng theo giá biểu)
+            <ul><li>Màu càng đậm càng nhiều khách hàng; ô bằng 0 màu xám.</li><li>Chạm một ô: "{Phường} • GB {n}" và "Số KH: {số đầy đủ}".</li></ul>
+            <button class="go-btn" data-go="tab:kh;target:kh-gb;tip:301">Xem trên app ▸</button>
+          </div>
+          <div class="mini wide" id="s3-4e" data-toc="3" data-toc-label="Biểu đồ không có tooltip" data-go="tab:thuho;target:thuho-rank">
+            <b>Biểu đồ không có tooltip</b>
+            <ul><li>"Báo cáo so sánh theo năm" ở màn hình tổng quan: chỉ đọc số trên đầu cột. <button class="go-btn sm" data-go="screen:overview;target:ov-chart">Xem ▸</button></li><li>Danh sách xếp hạng dạng thanh ngang (Sản lượng theo nhân viên, Xếp hạng phương thức thu, Tỷ lệ hoàn thành định danh, nội dung đơn DVKH/KTKS): số liệu ghi sẵn trên từng dòng. <button class="go-btn sm" data-go="tab:thuho;target:thuho-rank">Xem ▸</button></li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub" id="s3-5" data-toc="2" data-toc-label="3.5 Quy chuẩn Bảng số liệu" data-go="tab:dt;target:dt-ky;view:table">
+        <h3><span class="num">3.5</span> Quy chuẩn Bảng số liệu</h3>
+        <div class="tbl-demo">
+          <table class="dtable">
+            <thead><tr><th></th><th>Năm 2025</th><th>Năm 2026</th><th>+/-</th></tr></thead>
+            <tbody>
+              <tr><td class="l">Kỳ 1</td><td>33.400.000.000</td><td>32.800.000.000</td><td class="down">-600.000.000 ▼</td></tr>
+              <tr><td class="l">Kỳ 2</td><td>30.900.000.000</td><td>31.600.000.000</td><td class="up">+700.000.000 ▲</td></tr>
+              <tr><td class="l">Kỳ 10</td><td>33.800.000.000</td><td>--</td><td class="dl0">--</td></tr>
+              <tr class="tc"><td class="l">TC</td><td>98.100.000.000</td><td>64.400.000.000</td><td class="down">-33.700.000.000 ▼</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="bul">
+          <li>Dòng tiêu đề nền xanh nhạt; các dòng xen kẽ nền nhạt để dễ dò. Bảng nhiều cột thì vuốt ngang.</li>
+          <li>Cột chênh lệch <b>+/-</b>: <span class="up">▲ xanh dương = tăng</span>, <span class="down">▼ đỏ = giảm</span>, "--" = kỳ hiện tại chưa có số liệu.</li>
+          <li>Dòng <b>TC</b> (tổng cộng) hoặc <b>TB</b> (trung bình) in đậm, nền xanh lá nhạt. Một số bảng tính tổng riêng cho từng nhóm (phòng, phường, loại bể) trước dòng TC chung. <button class="go-btn sm" data-go="tab:kh;target:kh-gb;view:table">Xem ▸</button></li>
+          <li>Số hiển thị đầy đủ, có dấu chấm ngăn hàng nghìn, ví dụ 1.234.567.</li>
+        </ul>
+      </div>
+
+      <div class="sub" id="s3-6" data-toc="2" data-toc-label="3.6 Quản lý trạng thái dữ liệu" data-go="tab:kh;mode:skeleton">
+        <h3><span class="num">3.6</span> Quản lý trạng thái dữ liệu</h3>
+        <div class="states">
+          <div class="st-card" id="s3-6a" data-toc="3" data-toc-label="Đang tải (skeleton)" data-go="tab:sl;mode:skeleton"><b>Đang tải</b><p>Từng khu vực hiển thị khung xám nhấp nháy. Khu vực nào tải xong sẽ hiện số liệu trước.</p><button class="go-btn" data-go="tab:sl;mode:skeleton">Xem ▸</button></div>
+          <div class="st-card" id="s3-6b" data-toc="3" data-toc-label="Tải quá 30 giây" data-go="tab:kh;mode:error"><b>Tải quá 30 giây</b><p>Khung xám tự ẩn. Khu vực đã có dữ liệu cũ thì giữ; khu vực chưa có dữ liệu hiện "Không tải được dữ liệu, kéo xuống để thử lại". Màn hình tổng quan có thêm nút Thử lại.</p><button class="go-btn" data-go="tab:kh;mode:error">Xem ▸</button></div>
+          <div class="st-card" id="s3-6c" data-toc="3" data-toc-label="Không có dữ liệu" data-go="tab:dt;mode:empty"><b>Không có dữ liệu</b><p>Có thẻ hiện "Không có dữ liệu" nhưng vẫn giữ tiêu đề và nút lọc. Có thẻ tự ẩn hẳn: Doanh thu theo kỳ, Tỷ lệ thất thoát so sánh 2 năm, Giá bán bình quân theo kỳ, các thẻ Hóa đơn 0m³ / 1-4m³ / 0-4m³.</p><button class="go-btn" data-go="tab:dt;mode:empty">Xem ▸</button></div>
+          <div class="st-card" id="s3-6d" data-toc="3" data-toc-label="Làm mới (kéo xuống)" data-go="tab:kh"><b>Làm mới</b><p>Kéo nội dung tab xuống để tải lại số liệu mới nhất (trên điện thoại mô phỏng: nhấn giữ chuột rồi kéo xuống, hoặc bấm nút ⟳).</p><button class="go-btn" data-go="tab:kh">Xem ▸</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc-sec" id="s4" data-toc="1" data-toc-label="4. Hướng dẫn từng tab" data-go="tab:kh">
+      <h2><span class="num">4</span> Hướng dẫn chi tiết từng Tab chức năng</h2>
+      <div id="tabDocs"></div>
+    </section>
+
+    <section class="doc-sec" id="s5" data-toc="1" data-toc-label="5. Câu hỏi thường gặp">
+      <h2><span class="num">5</span> Câu hỏi thường gặp (FAQ)</h2>
+      <div class="faq">
+        <details id="faq1" data-toc="2" data-toc-label="Thẻ không hiện / Không có dữ liệu" open><summary>Thẻ / biểu đồ không hiện hoặc báo "Không có dữ liệu"?</summary><p>Kỳ hoặc Phường đang chọn chưa phát sinh dữ liệu trong hệ thống. Vui lòng thay đổi điều kiện lọc hoặc kéo màn hình xuống để làm mới. Một số thẻ sẽ tự động ẩn khi không có dữ liệu. <button class="go-btn sm" data-go="tab:dt;mode:empty">Xem ▸</button></p></details>
+        <details id="faq2" data-toc="2" data-toc-label="Khung xám kéo dài / lỗi tải"><summary>Khung xám nhấp nháy kéo dài hoặc báo lỗi tải dữ liệu?</summary><p>Kiểm tra lại kết nối mạng internet/VPN của thiết bị. Sau đó kéo xuống để tải lại. Tại màn hình tổng quan, bấm nút <b>Thử lại</b>. <button class="go-btn sm" data-go="screen:overview;mode:error">Xem ▸</button></p></details>
+        <details id="faq3" data-toc="2" data-toc-label="Bộ lọc không áp dụng cho thẻ khác"><summary>Vì sao bộ lọc ở thẻ này không áp dụng cho thẻ khác?</summary><p>Theo thiết kế, mỗi thẻ báo cáo có bộ lọc độc lập để phục vụ phân tích đa chiều (ngoại trừ thao tác đổi Năm tại một số thẻ đặc thù đã ghi rõ trong hướng dẫn).</p></details>
+        <details id="faq4" data-toc="2" data-toc-label="Đặt lại toàn bộ bộ lọc"><summary>Cách đặt lại (reset) toàn bộ điều kiện lọc về mặc định?</summary><p>Kéo màn hình tab xuống để làm mới (Pull-to-refresh). Thao tác này đưa các bộ lọc về cấu hình mặc định ban đầu.</p></details>
+      </div>
+    </section>
+
+    <section class="doc-sec" id="s6" data-toc="1" data-toc-label="6. Thuật ngữ">
+      <h2><span class="num">6</span> Bảng Thuật ngữ &amp; Từ viết tắt</h2>
+      <table class="gloss">
+        <thead><tr><th>Từ viết tắt</th><th>Diễn giải</th></tr></thead>
+        <tbody>
+          <tr><td>ĐHN / ĐHT</td><td>Đồng hồ nước (khách hàng) / Đồng hồ tổng</td></tr>
+          <tr><td>DMA</td><td>Khu vực quản lý đồng hồ tổng tách mạng (District Metered Area)</td></tr>
+          <tr><td>TTN / TTTN</td><td>Thất thoát nước / Tỷ lệ thất thoát nước (%)</td></tr>
+          <tr><td>GBBQ / GB</td><td>Giá bán bình quân (VNĐ/m³) / Giá biểu tính tiền nước</td></tr>
+          <tr><td>DVKH / KTKS</td><td>Dịch vụ khách hàng / Kiểm tra kiểm soát</td></tr>
+          <tr><td>QLGT 1 / QLGT 2</td><td>Quản lý ghi thu 1 / Quản lý ghi thu 2</td></tr>
+          <tr><td>CCCD / HĐ</td><td>Căn cước công dân / Hóa đơn tiền nước</td></tr>
+          <tr><td>Kỳ / Đợt</td><td>Kỳ (Tháng 1–12) / Đợt (1 kỳ có 12 đợt)</td></tr>
+          <tr><td>TC / TB / +/-</td><td>Tổng cộng / Trung bình / Chênh lệch tăng giảm (▲ tăng, ▼ giảm)</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <footer class="foot">PHUWACO Works · Module Báo cáo · Tài liệu hướng dẫn v1.0</footer>
+  </main>
+
+  <aside class="phone-col" id="phoneCol">
+    <div class="ph-tools">
+      <div class="ph-loc" id="phLoc"></div>
+      <div class="ph-btns">
+        <button id="tbHome" title="Về Trang chủ">⌂</button>
+        <button id="tbRefresh" title="Kéo xuống để làm mới">⟳</button>
+        <select id="tbMode" title="Trạng thái dữ liệu">
+          <option value="">Bình thường</option>
+          <option value="skeleton">Đang tải</option>
+          <option value="empty">Không có dữ liệu</option>
+          <option value="error">Lỗi tải</option>
+        </select>
+        <button id="tbReal" class="txt">Ảnh thực tế</button>
+      </div>
+    </div>
+    <div class="phone" id="phone">
+      <div class="ph-screen" id="phScreen"></div>
+      <div id="phSheet"></div>
+    </div>
+    <div class="ph-hint">Chạm, kéo, vuốt trực tiếp trên màn hình mô phỏng</div>
+  </aside>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<div class="lightbox" id="lightbox"><img id="lbImg" alt="Ảnh chụp màn hình"></div>
+
+<script src="js/data.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('kpiTable').innerHTML = OVERVIEW.kpis.map(k => {
+      const t = TABS.find(x => x.key === k.tab);
+      return `<button class="kpi-link" data-go="screen:overview;target:${k.id}"><i style="background:${k.color}"></i><span>${k.title}</span><em>→ Tab ${t.name}</em></button>`;
+    }).join('');
+  }, { once: true });
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>
